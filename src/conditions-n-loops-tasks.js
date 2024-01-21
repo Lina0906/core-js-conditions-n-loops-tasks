@@ -141,6 +141,31 @@ function convertToRomanNumerals(/* num */) {
  */
 function convertNumberToString(/* numberStr */) {
   throw new Error('Not implemented');
+  //   const digitToWord = {
+  //     '0': 'zero',
+  //     '1': 'one',
+  //     '2': 'two',
+  //     '3': 'three',
+  //     '4': 'four',
+  //     '5': 'five',
+  //     '6': 'six',
+  //     '7': 'seven',
+  //     '8': 'eight',
+  //     '9': 'nine',
+  //     '.': 'point',
+  // };
+  // let result = '';
+  // if (numberStr < 0) {
+  //     result += 'minus ';
+  //     numberStr = -numberStr;
+  // }
+  // while (numberStr > 0) {
+  //     const digit = numberStr % 10;
+  //     const digitWord = digitToWord[digit.toString()];
+  //     result = digitWord + result;
+  //     numberStr = Math.floor(numberStr / 10);
+  // }
+  // return result || 'zero';
 }
 
 /**
@@ -178,8 +203,14 @@ function isPalindrome(str) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(/* str, letter */) {
-  throw new Error('Not implemented');
+function getIndexOf(str, letter) {
+  let index = -1;
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] === letter) {
+      index = i;
+    }
+  }
+  return index;
 }
 
 /**
